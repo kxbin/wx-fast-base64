@@ -1,7 +1,7 @@
 # wx-fast-base64
 微信小程序最快的 base64 编码/转码方案，基于 Wasm + SIMD。
 
-wx-fast-base64 参考了借鉴了以下两个库，在此致谢！
+wx-fast-base64 参考借鉴了以下两个库，在此致谢！
 
 js-base64：https://github.com/dankogai/js-base64
 
@@ -19,7 +19,7 @@ fast-base64：https://github.com/mitschabaude/fast-base64
 
 # 性能对比如下：
 
-测试用的 base64 长度为 50KB
+测试用的 arrayBuffer 长度为 50KB, 测试编码速度
 
 wx.arrayBufferToBase64：平均40ms
 
@@ -29,11 +29,11 @@ wx-fast-base64： 平均2ms
 
 结论：
 
-wx-fast-base64 解码速度比 js-base64 快5倍， 比原生 api 快 20 倍
+wx-fast-base64 编码速度比 js-base64 快 5 倍， 比原生 api 快 20 倍
 
 
 # 快速上手
-将该项目的 libs 文件夹放入小程序的app.js同级目录
+将该项目的 libs 文件夹放入小程序的 app.js 同级目录
 
 ```
 const Base64 = require("/libs/base64.js");
@@ -43,7 +43,7 @@ Base64.fromUint8Array(u8a).then(base64 => {
     console.log(base64);
 })
 
-// base64y转Uint8Arra
+// base64转Uint8Array
 Base64.toUint8Array(base64).then(u8a => {
     console.log(u8a);
 })
