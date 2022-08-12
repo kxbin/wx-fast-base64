@@ -1,5 +1,5 @@
 # wx-fast-base64
-微信小程序最快的 base64 编码/转码方案，基于 Wasm + SIMD。
+微信小程序最快的 base64 编码/解码方案，基于 Wasm + SIMD。
 
 wx-fast-base64 参考借鉴了以下两个库，在此致谢！
 
