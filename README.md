@@ -1,5 +1,5 @@
 # wx-fast-base64
-微信小程序最快的 base64 编码/解码方案，基于 Wasm + SIMD。
+最快的 base64 编码/解码方案，基于 Wasm + SIMD，微信小程序专用
 
 wx-fast-base64 参考借鉴了以下两个库，在此致谢！
 
@@ -15,7 +15,7 @@ fast-base64：https://github.com/mitschabaude/fast-base64
 
 因此 wx-fast-base64 采用了 WebAssembly 和 SIMD 技术。
 
-将转码算法编译成汇编指令执行，并对支持 SIMD 指令的 CPU 做了额外优化
+将转码算法编译成汇编指令执行，并对支持 SIMD 指令的 CPU 做了额外优化。
 
 # 性能对比如下：
 
@@ -29,7 +29,7 @@ wx-fast-base64： 平均2ms
 
 结论：
 
-wx-fast-base64 编码速度比 js-base64 快 5 倍， 比原生 api 快 20 倍
+wx-fast-base64 编码速度比 js-base64 快 5 倍， 比原生 api 快 20 倍。
 
 
 # 快速上手
